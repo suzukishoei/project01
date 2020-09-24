@@ -92,7 +92,7 @@ var insertTask = function () {
 
   //何も入力されていない場合
   if(item === ""){
-    
+    ons.notification.toast('タスクが入力されていません', { timeout: 3000, animation: 'fall' })
     hideInsertDialog(); //ダイアログを閉じる
     return;
   }
