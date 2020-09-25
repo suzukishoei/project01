@@ -126,6 +126,7 @@ var insertTask = function () {
 *Google Taskからタスクを削除する
 */
 var deleteTask = function(){
+
   hideAlartDialog();
   return;
 }
