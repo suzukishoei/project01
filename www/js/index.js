@@ -123,6 +123,14 @@ var insertTask = function () {
 };
 
 /**
+*Google Taskからタスクを削除する
+*/
+var deleteTask = function(){
+  hideAlartDialog();
+  return;
+}
+
+/**
  * タスク追加ダイアログを表示
  */
 var createInsertDialog = function () {
@@ -145,4 +153,27 @@ var createInsertDialog = function () {
 var hideInsertDialog = function () {
   document.getElementById('insert-task').hide();
   document.getElementById('input_task_title').value = '';
+};
+/**
+ * タスク削除ダイアログを表示
+ */
+var createAlartDialog = function () {
+
+  var dialog = document.getElementById('delete-task');
+
+  if (dialog) {
+    dialog.show();
+  } else {
+    ons.createElement('delete_task_dialog.html', { append: true })
+      .then(function (dialog) {
+        dialog.show();
+      });
+  }
+};
+
+/** 
+ * タスク削除ダイアログを非表示
+ */
+var hideAlartDialog = function () {
+  document.getElementById('delete-task').hide();
 };
