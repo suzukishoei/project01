@@ -128,7 +128,6 @@ var insertTask = function () {
 var deleteTask = function(){
 
   hideAlartDialog();
-  return;
 }
 
 /**
